@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    
+
+   
+    img{
+        height:40px;
+        display:flex;
+        margin:auto;
+      
+       
+        
+    }
+    .divider{
+        border-bottom: 1px solid black;
+        margin-bottom: 5%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card transparent" style=" max-width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;">
+      <div class="text-center mb-3">
+        <a href="https://www.facebook.com" class="btn btn-block "><h3>Register your self Here</h3></a>
+        <!-- <button type="button" class="btn btn-primary google-button">Login with Google</button> -->
+      </div>
+    <div class="divider">
+
+    </div>
+      <form>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="text" class="form-control" id="Name" placeholder="Enter Your Name" required>
+            </div>
+          </div>
+       
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="email" class="form-control" id="emailAddress" placeholder="Email Address" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" id="phone" placeholder="Phone Number" required>
+              </div>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="gender">Gender: </label>
+              <div class="form-check form-check-inline">
+                <input type="radio" name="Gender" value="Male" class="form-check-input" required/>Male
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" name="Gender" value="Female" class="form-check-input" />Female
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="password" class="form-control" id="password" placeholder="Enter your Password" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group text-center">
+              <button type="submit" name="submit" class="btn btn-primary facebook-button">Sign Up</button>
+            </div>
+            <p class="text-center">Already have an account? <a href="login.php">Log In</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

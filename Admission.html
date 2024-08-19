@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" />
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+
+<body>
+    <div class="layout">
+
+        <nav>
+            <ul>
+                <li class="logo">MIC</li>
+                <li class="items"><a href="index.html">Home</a></li>
+                <li class="items"><a href="Aboutus.html">About us</a></li>
+                <li class="items"><a href="Courses.html">Courses</a></li>
+                <li class="items"><a href="contactus.html">Contact us</a></li>
+                <li class="items"><a href="Admission.html">Admission</a></li>
+                <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+        </nav>
+        <script>
+            $(document).ready(function () {
+                $('.btn').click(function () {
+                    $('.items').toggleClass("show");
+                    $('ul li').toggleClass("hide");
+                })
+            })
+
+        </script>
+        <div class="main">
+            <br />
+            <div class="container-fluid">
+
+                <h5 class="text-center">Personal Information</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="upload-image-preview"
+                            style="width:200px; height:200px; border:1px solid #8e8c8c; border-radius:4px; box-shadow:2px 3px 2px #c1c0c0; margin-bottom:10px;">
+                            <img id="blah" src="Images/blank.png" alt="No Image Selected"
+                                style="width:190px; height:190px;width:200px; height:200px; border:1px solid #8e8c8c; border-radius:4px; box-shadow:2px 3px 2px #c1c0c0; margin-bottom:10px;">
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input class="form-control-file" data-val="true"
+                                data-val-length="This Field cannot be longer than 200 characters."
+                                data-val-length-max="200" data-val-required="This field is required." id="file"
+                                name="imgpath" onchange="readURL(this);" type="file" value="">
+                            <span class="field-validation-valid text-danger" data-valmsg-for="imgpath"
+                                data-valmsg-replace="true"></span>
+                            <p style="font-size:14px">
+                                * Upload your passport size photo <br>
+                                * Your photo size must be less than 4mb
+                            </p>
+                            <p style="font-size:14px">
+                                <b>Instructions:</b> You can also lower down(resize) of your photo/document by using
+                                Paint.<br>
+                                <b>Step 1:</b> Right click on your document and select Open with Paint.<br>
+                                <b>Step 2:</b> Click on Resize option on paint and reduce Horizontal and Vertical size
+                                accordingly.<br>
+                                <b>Step 3:</b> Click OK and Save your document. You can check the size of your document
+                                by right clicking on document properties.<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="basic-url">First Name *</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <!--   <span class="input-group-text"><i class="fa fa-user"></i></span>-->
+                            </div>
+                            <input class="form-control" data-val="true"
+                                data-val-length="This Field cannot be longer than 50 characters."
+                                data-val-length-max="50" data-val-required="This field is required." id="fname"
+                                name="fname" placeholder="First Name" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="fname"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Middle Name</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input class="form-control" data-val="true"
+                                data-val-length="This Field cannot be longer than 50 characters."
+                                data-val-length-max="50" id="mname" name="mname" placeholder="Middle Name" type="text"
+                                value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="mname"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Last Name *</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input class="form-control" data-val="true"
+                                data-val-length="This Field cannot be longer than 50 characters."
+                                data-val-length-max="50" data-val-required="This field is required." id="lname"
+                                name="lname" placeholder="Last Name" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="lname"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="basic-url">Gender *</label>
+                        <div class="input-group">
+                            <select class="form-control" data-val="true" data-val-required="This field is required."
+                                id="gender" name="gender">
+                                <option value="">Select Gender</option>
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                            </select>
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="gender"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Date of Birth *</label>
+                        <div class="input-group">
+                            <input class="form-control" data-val="true" data-val-date="The field dob must be a date."
+                                data-val-required="This field is required." id="dob" name="dob"
+                                placeholder="Date of Birth" type="date" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="dob"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Nationality *</label>
+                        <div class="input-group">
+                            <select class="form-control" data-val="true"
+                                data-val-number="The field nationality_id must be a number."
+                                data-val-required="This field is required." id="nationality_id" name="nationality_id">
+                                <option value="">Please select Nationality</option>
+                                <option value="4">Afghan</option>
+                                <option value="8">Albanian</option>
+                                <option value="10">Antarctic</option>
+                                <option value="12">Algerian</option>
+                                <option value="16">American Samoan</option>
+                                <option value="20">Andorran</option>
+                                <option value="24">Angolan</option>
+                                <option value="28">Antiguan or Barbudan</option>
+                                <option value="31">Azerbaijani, Azeri</option>
+                                <option value="32">Argentine</option>
+                                <option value="36">Australian</option>
+                                <option value="40">Austrian</option>
+                                <option value="44">Bahamian</option>
+                                <option value="48">Bahraini</option>
+                                <option value="50">Bangladeshi</option>
+                                <option value="51">Armenian</option>
+                                <option value="52">Barbadian</option>
+                                <option value="56">Belgian</option>
+                                <option value="60">Bermudian, Bermudan</option>
+                                <option value="64">Bhutanese</option>
+                                <option value="68">Bolivian</option>
+                                <option value="70">Bosnian or Herzegovinian</option>
+                                <option value="72">Motswana, Botswanan</option>
+                                <option value="74">Bouvet Island</option>
+                                <option value="76">Brazilian</option>
+                                <option value="84">Belizean</option>
+                                <option value="86">BIOT</option>
+                                <option value="90">Solomon Island</option>
+                                <option value="92">British Virgin Island</option>
+                                <option value="96">Bruneian</option>
+                                <option value="100">Bulgarian</option>
+                                <option value="104">Burmese</option>
+                                <option value="108">Burundian</option>
+                                <option value="112">Belarusian</option>
+                                <option value="116">Cambodian</option>
+                                <option value="120">Cameroonian</option>
+                                <option value="124">Canadian</option>
+                                <option value="132">Cabo Verdean</option>
+                                <option value="136">Caymanian</option>
+                                <option value="140">Central African</option>
+                                <option value="144">Sri Lankan</option>
+                                <option value="148">Chadian</option>
+                                <option value="152">Chilean</option>
+                                <option value="156">Chinese</option>
+                                <option value="158">Chinese, Taiwanese</option>
+                                <option value="162">Christmas Island</option>
+                                <option value="166">Cocos Island</option>
+                                <option value="170">Colombian</option>
+                                <option value="174">Comoran, Comorian</option>
+                                <option value="175">Mahoran</option>
+                                <option value="178">Congolese</option>
+                                <option value="180">Congolese</option>
+                                <option value="184">Cook Island</option>
+                                <option value="188">Costa Rican</option>
+                                <option value="191">Croatian</option>
+                                <option value="192">Cuban</option>
+                                <option value="196">Cypriot</option>
+                                <option value="203">Czech</option>
+                                <option value="204">Beninese, Beninois</option>
+                                <option value="208">Danish</option>
+                                <option value="212">Dominican</option>
+                                <option value="214">Dominican</option>
+                                <option value="218">Ecuadorian</option>
+                                <option value="222">Salvadoran</option>
+                                <option value="226">Equatorial Guinean, Equatoguinean</option>
+                                <option value="231">Ethiopian</option>
+                                <option value="232">Eritrean</option>
+                                <option value="233">Estonian</option>
+                                <option value="234">Faroese</option>
+                                <option value="238">Falkland Island</option>
+                                <option value="239">South Georgia or South Sandwich Islands</option>
+                                <option value="242">Fijian</option>
+                                <option value="246">Finnish</option>
+                                <option value="248">Åland Island</option>
+                                <option value="250">French</option>
+                                <option value="254">French Guianese</option>
+                                <option value="258">French Polynesian</option>
+                                <option value="260">French Southern Territories</option>
+                                <option value="262">Djiboutian</option>
+                                <option value="266">Gabonese</option>
+                                <option value="268">Georgian</option>
+                                <option value="270">Gambian</option>
+                                <option value="275">Palestinian</option>
+                                <option value="276">German</option>
+                                <option value="288">Ghanaian</option>
+                                <option value="292">Gibraltar</option>
+                                <option value="296">I-Kiribati</option>
+                                <option value="300">Greek, Hellenic</option>
+                                <option value="304">Greenlandic</option>
+                                <option value="308">Grenadian</option>
+                                <option value="312">Guadeloupe</option>
+                                <option value="316">Guamanian, Guambat</option>
+                                <option value="320">Guatemalan</option>
+                                <option value="324">Guinean</option>
+                                <option value="328">Guyanese</option>
+                                <option value="332">Haitian</option>
+                                <option value="334">Heard Island or McDonald Islands</option>
+                                <option value="336">Vatican</option>
+                                <option value="340">Honduran</option>
+                                <option value="344">Hong Kong, Hong Kongese</option>
+                                <option value="348">Hungarian, Magyar</option>
+                                <option value="352">Icelandic</option>
+                                <option value="356">Indian</option>
+                                <option value="360">Indonesian</option>
+                                <option value="364">Iranian, Persian</option>
+                                <option value="368">Iraqi</option>
+                                <option value="372">Irish</option>
+                                <option value="376">Israeli</option>
+                                <option value="380">Italian</option>
+                                <option value="384">Ivorian</option>
+                                <option value="388">Jamaican</option>
+                                <option value="392">Japanese</option>
+                                <option value="398">Kazakhstani, Kazakh</option>
+                                <option value="400">Jordanian</option>
+                                <option value="404">Kenyan</option>
+                                <option value="408">North Korean</option>
+                                <option value="410">South Korean</option>
+                                <option value="414">Kuwaiti</option>
+                                <option value="417">Kyrgyzstani, Kyrgyz, Kirgiz, Kirghiz</option>
+                                <option value="418">Lao, Laotian</option>
+                                <option value="422">Lebanese</option>
+                                <option value="426">Basotho</option>
+                                <option value="428">Latvian</option>
+                                <option value="430">Liberian</option>
+                                <option value="434">Libyan</option>
+                                <option value="438">Liechtenstein</option>
+                                <option value="440">Lithuanian</option>
+                                <option value="442">Luxembourg, Luxembourgish</option>
+                                <option value="446">Macanese, Chinese</option>
+                                <option value="450">Malagasy</option>
+                                <option value="454">Malawian</option>
+                                <option value="458">Malaysian</option>
+                                <option value="462">Maldivian</option>
+                                <option value="466">Malian, Malinese</option>
+                                <option value="470">Maltese</option>
+                                <option value="474">Martiniquais, Martinican</option>
+                                <option value="478">Mauritanian</option>
+                                <option value="480">Mauritian</option>
+                                <option value="484">Mexican</option>
+                                <option value="492">Monégasque, Monacan</option>
+                                <option value="496">Mongolian</option>
+                                <option value="498">Moldovan</option>
+                                <option value="499">Montenegrin</option>
+                                <option value="500">Montserratian</option>
+                                <option value="504">Moroccan</option>
+                                <option value="508">Mozambican</option>
+                                <option value="512">Omani</option>
+                                <option value="516">Namibian</option>
+                                <option value="520">Nauruan</option>
+                                <option value="524">Nepali, Nepalese</option>
+                                <option value="528">Dutch, Netherlandic</option>
+                                <option value="531">Curaçaoan</option>
+                                <option value="533">Aruban</option>
+                                <option value="534">Sint Maarten</option>
+                                <option value="535">Bonaire</option>
+                                <option value="540">New Caledonian</option>
+                                <option value="548">Ni-Vanuatu, Vanuatuan</option>
+                                <option value="554">New Zealand, NZ</option>
+                                <option value="558">Nicaraguan</option>
+                                <option value="562">Nigerien</option>
+                                <option value="566">Nigerian</option>
+                                <option value="570">Niuean</option>
+                                <option value="574">Norfolk Island</option>
+                                <option value="578">Norwegian</option>
+                                <option value="580">Northern Marianan</option>
+                                <option value="581">American</option>
+                                <option value="583">Micronesian</option>
+                                <option value="584">Marshallese</option>
+                                <option value="585">Palauan</option>
+                                <option value="586">Pakistani</option>
+                                <option value="591">Panamanian</option>
+                                <option value="598">Papua New Guinean, Papuan</option>
+                                <option value="600">Paraguayan</option>
+                                <option value="604">Peruvian</option>
+                                <option value="608">Philippine, Filipino</option>
+                                <option value="612">Pitcairn Island</option>
+                                <option value="616">Polish</option>
+                                <option value="620">Portuguese</option>
+                                <option value="624">Bissau-Guinean</option>
+                                <option value="626">Timorese</option>
+                                <option value="630">Puerto Rican</option>
+                                <option value="634">Qatari</option>
+                                <option value="638">Réunionese, Réunionnais</option>
+                                <option value="642">Romanian</option>
+                                <option value="643">Russian</option>
+                                <option value="646">Rwandan</option>
+                                <option value="652">Barthélemois</option>
+                                <option value="654">Saint Helenian</option>
+                                <option value="659">Kittitian or Nevisian</option>
+                                <option value="660">Anguillan</option>
+                                <option value="662">Saint Lucian</option>
+                                <option value="663">Saint-Martinoise</option>
+                                <option value="666">Saint-Pierrais or Miquelonnais</option>
+                                <option value="670">Saint Vincentian, Vincentian</option>
+                                <option value="674">Sammarinese</option>
+                                <option value="678">São Toméan</option>
+                                <option value="682">Saudi, Saudi Arabian</option>
+                                <option value="686">Senegalese</option>
+                                <option value="688">Serbian</option>
+                                <option value="690">Seychellois</option>
+                                <option value="694">Sierra Leonean</option>
+                                <option value="702">Singaporean</option>
+                                <option value="703">Slovak</option>
+                                <option value="704">Vietnamese</option>
+                                <option value="705">Slovenian, Slovene</option>
+                                <option value="706">Somali, Somalian</option>
+                                <option value="710">South African</option>
+                                <option value="716">Zimbabwean</option>
+                                <option value="724">Spanish</option>
+                                <option value="728">South Sudanese</option>
+                                <option value="729">Sudanese</option>
+                                <option value="732">Sahrawi, Sahrawian, Sahraouian</option>
+                                <option value="740">Surinamese</option>
+                                <option value="744">Svalbard</option>
+                                <option value="748">Swazi</option>
+                                <option value="752">Swedish</option>
+                                <option value="756">Swiss</option>
+                                <option value="760">Syrian</option>
+                                <option value="762">Tajikistani</option>
+                                <option value="764">Thai</option>
+                                <option value="768">Togolese</option>
+                                <option value="772">Tokelauan</option>
+                                <option value="776">Tongan</option>
+                                <option value="780">Trinidadian or Tobagonian</option>
+                                <option value="784">Emirati, Emirian, Emiri</option>
+                                <option value="788">Tunisian</option>
+                                <option value="792">Turkish</option>
+                                <option value="795">Turkmen</option>
+                                <option value="796">Turks and Caicos Island</option>
+                                <option value="798">Tuvaluan</option>
+                                <option value="800">Ugandan</option>
+                                <option value="804">Ukrainian</option>
+                                <option value="807">Macedonian</option>
+                                <option value="818">Egyptian</option>
+                                <option value="826">British, UK</option>
+                                <option value="831">Channel Island</option>
+                                <option value="832">Channel Island</option>
+                                <option value="833">Manx</option>
+                                <option value="834">Tanzanian</option>
+                                <option value="840">American</option>
+                                <option value="850">U.S. Virgin Island</option>
+                                <option value="854">Burkinabé</option>
+                                <option value="858">Uruguayan</option>
+                                <option value="860">Uzbekistani, Uzbek</option>
+                                <option value="862">Venezuelan</option>
+                                <option value="876">Wallis and Futuna, Wallisian or Futunan</option>
+                                <option value="882">Samoan</option>
+                                <option value="887">Yemeni</option>
+                                <option value="894">Zambian</option>
+                            </select>
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="nationality_id"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="basic-url">CNIC/CRC No.*</label>
+                        <div class="input-group">
+                            <input class="form-control" data-val="true"
+                                data-val-regex="CNIC No must follow the XXXXXXXXXXXXX format!"
+                                data-val-regex-pattern="^[0-9]{5}[0-9]{7}[0-9]$"
+                                data-val-required="This field is required." id="cnic" name="cnic"
+                                placeholder="XXXXXXXXXXXXX" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="cnic"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Email *</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input class="form-control" data-val="true"
+                                data-val-length="This Field cannot be longer than 50 characters."
+                                data-val-length-max="50" data-val-regex="Email is not valid."
+                                data-val-regex-pattern="^\w+([-+.&#39;]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
+                                data-val-remote="This Email is Already Exist in this Semester"
+                                data-val-remote-additionalfields="*.email,*.email"
+                                data-val-remote-url="/Home/CheckTermAndEmail"
+                                data-val-required="This field is required." id="email" name="email" placeholder="Email"
+                                type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="email"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Mobile No.*</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input class="form-control phoneRex only-numeric" data-val="true"
+                                data-val-length="Not a valid phone number (xxxxxxxxxxx)" data-val-length-max="11"
+                                data-val-required="This field is required." id="mobile" maxlength="11" minlength="11"
+                                name="mobile" placeholder="03xxxxxxxxx" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="mobile"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="basic-url">Landline No. (Optional)</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input class="form-control phoneRex" data-val="true"
+                                data-val-length="Not a valid phone number (03xxxxxxxxx)" data-val-length-max="11"
+                                id="landline" name="landline" placeholder="xxxxxxxxxxx" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="landline"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Religion</label>
+                        <div class="input-group">
+                            <select class="form-control" data-val="true"
+                                data-val-number="The field religion_id must be a number."
+                                data-val-required="This field is required." id="religion_id" name="religion_id">
+                                <option value="">--- Select Religion ---</option>
+                                <option value="1">Muslim</option>
+                                <option value="2">Christian</option>
+                                <option value="3">Hindu</option>
+                                <option value="4">Others </option>
+                            </select>
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="religion_id"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Province of Domicile</label>
+                        <div class="input-group">
+                            <select class="form-control" data-val="true"
+                                data-val-number="The field domicile_id must be a number."
+                                data-val-required="This field is required." id="domicile_id" name="domicile_id">
+                                <option value="">--- Select Province of Domicile ---</option>
+                                <option value="1">Punjab</option>
+                                <option value="2">Balochistan</option>
+                                <option value="3">Khyber Pakhtoonkhwa</option>
+                                <option value="4">Sindh (Urban)</option>
+                                <option value="5">Sindh (Rural)</option>
+                                <option value="6">AJK</option>
+                                <option value="7">GB</option>
+                                <option value="8">Not Available</option>
+                            </select>
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="domicile_id"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="row" style="display:none" id="othr_religion">
+                    <div class="col-md-12">
+                        <label for="basic-url">Other Religion</label>
+                        <div class="input-group">
+                            <input class="form-control" data-val="true"
+                                data-val-length="This Field cannot be longer than 100 characters."
+                                data-val-length-max="100" data-val-required="This field is required."
+                                id="religion_other_desc" name="religion_other_desc" placeholder="" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="religion_other_desc"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                </p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="text-center">Father's/Guardian Information </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="basic-url">Father's/Guardian First Name*</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input class="form-control" data-val="true"
+                                data-val-length="This Field cannot be longer than 50 characters."
+                                data-val-length-max="50" data-val-required="This field is required." id="g_fname"
+                                name="g_fname" placeholder="" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="g_fname"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Father's/Guardian Middle Name</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input class="form-control" data-val="true"
+                                data-val-length="This Field cannot be longer than 50 characters."
+                                data-val-length-max="50" id="g_mname" name="g_mname" placeholder="" type="text"
+                                value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="g_mname"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Father's/Guardian Last Name*</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input class="form-control" data-val="true"
+                                data-val-length="This Field cannot be longer than 50 characters."
+                                data-val-length-max="50" data-val-required="This field is required." id="g_lname"
+                                name="g_lname" placeholder="" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="g_lname"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="basic-url">Qualification*</label>
+                        <div class="input-group">
+                            <input class="form-control" data-val="true"
+                                data-val-length="This Field cannot be longer than 100 characters."
+                                data-val-length-max="100" data-val-required="This field is required."
+                                id="g_qualification" name="g_qualification" placeholder="" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="g_qualification"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Mobile No.*</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input class="form-control phoneRex" data-val="true"
+                                data-val-length="Not a valid phone number (xxxxxxxxxxx)" data-val-length-max="11"
+                                data-val-required="This field is required." id="g_num" name="g_num"
+                                placeholder="xxxxxxxxxxx" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="g_num"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Father/Guardian CNIC/CRC No*</label>
+                        <div class="input-group">
+                            <input class="form-control " data-val="true"
+                                data-val-regex="CNIC No must follow the XXXXXXXXXXXXX format!"
+                                data-val-regex-pattern="^[0-9]{5}[0-9]{7}[0-9]$"
+                                data-val-required="This field is required." id="g_cnic" name="g_cnic"
+                                placeholder="XXXXXXXXXXXXX" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="g_cnic"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="basic-url">Office No. (Optional)</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input class="form-control phoneRex" data-val="true"
+                                data-val-length="Not a valid phone number (xxxxxxxxxxx)" data-val-length-max="11"
+                                id="g_ofcnum" name="g_ofcnum" placeholder="xxxxxxxxxxx" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="g_ofcnum"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">Relationship</label>
+                        <div class="input-group">
+                            <select class="form-control" data-val="true"
+                                data-val-length="This Field cannot be longer than 50 characters."
+                                data-val-length-max="50" data-val-required="This field is required." id="g_relation"
+                                name="g_relation">
+                                <option value="Father">Father</option>
+                                <option value="Mother">Mother</option>
+                                <option value="Uncle">Uncle</option>
+                                <option value="Self">Self</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="g_relation"
+                            data-valmsg-replace="true"></span>
+                    </div>
+
+                </div>
+                </p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="text-center">Postal Address </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="basic-url">Address</label>
+                        <div class="input-group">
+                            <input class="form-control" data-val="true"
+                                data-val-length="This Field cannot be longer than 250 characters."
+                                data-val-length-max="250" data-val-required="This field is required." id="streetAdr"
+                                name="streetAdr" placeholder="" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="streetAdr"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="basic-url">Country</label>
+                        <div class="input-group">
+                            <select class="form-control" data-val="true" data-val-required="This field is required."
+                                id="country" name="country">
+                                <option value="">Please select Country Name</option>
+                                <option value="1">Afghanistan</option>
+                                <option value="2">Albania</option>
+                                <option value="3">Algeria</option>
+                                <option value="4">American Samoa</option>
+                                <option value="5">Andorra</option>
+                                <option value="6">Angola</option>
+                                <option value="7">Anguilla</option>
+                                <option value="8">Antarctica</option>
+                                <option value="9">Antigua And Barbuda</option>
+                                <option value="10">Argentina</option>
+                                <option value="11">Armenia</option>
+                                <option value="12">Aruba</option>
+                                <option value="13">Australia</option>
+                                <option value="14">Austria</option>
+                                <option value="15">Azerbaijan</option>
+                                <option value="16">Bahamas The</option>
+                                <option value="17">Bahrain</option>
+                                <option value="18">Bangladesh</option>
+                                <option value="19">Barbados</option>
+                                <option value="20">Belarus</option>
+                                <option value="21">Belgium</option>
+                                <option value="22">Belize</option>
+                                <option value="23">Benin</option>
+                                <option value="24">Bermuda</option>
+                                <option value="25">Bhutan</option>
+                                <option value="26">Bolivia</option>
+                                <option value="27">Bosnia and Herzegovina</option>
+                                <option value="28">Botswana</option>
+                                <option value="29">Bouvet Island</option>
+                                <option value="30">Brazil</option>
+                                <option value="31">British Indian Ocean Territory</option>
+                                <option value="32">Brunei</option>
+                                <option value="33">Bulgaria</option>
+                                <option value="34">Burkina Faso</option>
+                                <option value="35">Burundi</option>
+                                <option value="36">Cambodia</option>
+                                <option value="37">Cameroon</option>
+                                <option value="38">Canada</option>
+                                <option value="39">Cape Verde</option>
+                                <option value="40">Cayman Islands</option>
+                                <option value="41">Central African Republic</option>
+                                <option value="42">Chad</option>
+                                <option value="43">Chile</option>
+                                <option value="44">China</option>
+                                <option value="45">Christmas Island</option>
+                                <option value="46">Cocos (Keeling) Islands</option>
+                                <option value="47">Colombia</option>
+                                <option value="48">Comoros</option>
+                                <option value="49">Congo</option>
+                                <option value="50">Congo The Democratic Republic Of The</option>
+                                <option value="51">Cook Islands</option>
+                                <option value="52">Costa Rica</option>
+                                <option value="53">Cote D'Ivoire (Ivory Coast)</option>
+                                <option value="54">Croatia (Hrvatska)</option>
+                                <option value="55">Cuba</option>
+                                <option value="56">Cyprus</option>
+                                <option value="57">Czech Republic</option>
+                                <option value="58">Denmark</option>
+                                <option value="59">Djibouti</option>
+                                <option value="60">Dominica</option>
+                                <option value="61">Dominican Republic</option>
+                                <option value="62">East Timor</option>
+                                <option value="63">Ecuador</option>
+                                <option value="64">Egypt</option>
+                                <option value="65">El Salvador</option>
+                                <option value="66">Equatorial Guinea</option>
+                                <option value="67">Eritrea</option>
+                                <option value="68">Estonia</option>
+                                <option value="69">Ethiopia</option>
+                                <option value="70">External Territories of Australia</option>
+                                <option value="71">Falkland Islands</option>
+                                <option value="72">Faroe Islands</option>
+                                <option value="73">Fiji Islands</option>
+                                <option value="74">Finland</option>
+                                <option value="75">France</option>
+                                <option value="76">French Guiana</option>
+                                <option value="77">French Polynesia</option>
+                                <option value="78">French Southern Territories</option>
+                                <option value="79">Gabon</option>
+                                <option value="80">Gambia The</option>
+                                <option value="81">Georgia</option>
+                                <option value="82">Germany</option>
+                                <option value="83">Ghana</option>
+                                <option value="84">Gibraltar</option>
+                                <option value="85">Greece</option>
+                                <option value="86">Greenland</option>
+                                <option value="87">Grenada</option>
+                                <option value="88">Guadeloupe</option>
+                                <option value="89">Guam</option>
+                                <option value="90">Guatemala</option>
+                                <option value="91">Guernsey and Alderney</option>
+                                <option value="92">Guinea</option>
+                                <option value="93">Guinea-Bissau</option>
+                                <option value="94">Guyana</option>
+                                <option value="95">Haiti</option>
+                                <option value="96">Heard and McDonald Islands</option>
+                                <option value="97">Honduras</option>
+                                <option value="98">Hong Kong S.A.R.</option>
+                                <option value="99">Hungary</option>
+                                <option value="100">Iceland</option>
+                                <option value="101">India</option>
+                                <option value="102">Indonesia</option>
+                                <option value="103">Iran</option>
+                                <option value="104">Iraq</option>
+                                <option value="105">Ireland</option>
+                                <option value="106">Israel</option>
+                                <option value="107">Italy</option>
+                                <option value="108">Jamaica</option>
+                                <option value="109">Japan</option>
+                                <option value="110">Jersey</option>
+                                <option value="111">Jordan</option>
+                                <option value="112">Kazakhstan</option>
+                                <option value="113">Kenya</option>
+                                <option value="114">Kiribati</option>
+                                <option value="115">Korea North</option>
+                                <option value="116">Korea South</option>
+                                <option value="117">Kuwait</option>
+                                <option value="118">Kyrgyzstan</option>
+                                <option value="119">Laos</option>
+                                <option value="120">Latvia</option>
+                                <option value="121">Lebanon</option>
+                                <option value="122">Lesotho</option>
+                                <option value="123">Liberia</option>
+                                <option value="124">Libya</option>
+                                <option value="125">Liechtenstein</option>
+                                <option value="126">Lithuania</option>
+                                <option value="127">Luxembourg</option>
+                                <option value="128">Macau S.A.R.</option>
+                                <option value="129">Macedonia</option>
+                                <option value="130">Madagascar</option>
+                                <option value="131">Malawi</option>
+                                <option value="132">Malaysia</option>
+                                <option value="133">Maldives</option>
+                                <option value="134">Mali</option>
+                                <option value="135">Malta</option>
+                                <option value="136">Man (Isle of)</option>
+                                <option value="137">Marshall Islands</option>
+                                <option value="138">Martinique</option>
+                                <option value="139">Mauritania</option>
+                                <option value="140">Mauritius</option>
+                                <option value="141">Mayotte</option>
+                                <option value="142">Mexico</option>
+                                <option value="143">Micronesia</option>
+                                <option value="144">Moldova</option>
+                                <option value="145">Monaco</option>
+                                <option value="146">Mongolia</option>
+                                <option value="147">Montserrat</option>
+                                <option value="148">Morocco</option>
+                                <option value="149">Mozambique</option>
+                                <option value="150">Myanmar</option>
+                                <option value="151">Namibia</option>
+                                <option value="152">Nauru</option>
+                                <option value="153">Nepal</option>
+                                <option value="154">Netherlands Antilles</option>
+                                <option value="155">Netherlands The</option>
+                                <option value="156">New Caledonia</option>
+                                <option value="157">New Zealand</option>
+                                <option value="158">Nicaragua</option>
+                                <option value="159">Niger</option>
+                                <option value="160">Nigeria</option>
+                                <option value="161">Niue</option>
+                                <option value="162">Norfolk Island</option>
+                                <option value="163">Northern Mariana Islands</option>
+                                <option value="164">Norway</option>
+                                <option value="165">Oman</option>
+                                <option value="166">Pakistan</option>
+                                <option value="167">Palau</option>
+                                <option value="168">Palestinian Territory Occupied</option>
+                                <option value="169">Panama</option>
+                                <option value="170">Papua new Guinea</option>
+                                <option value="171">Paraguay</option>
+                                <option value="172">Peru</option>
+                                <option value="173">Philippines</option>
+                                <option value="174">Pitcairn Island</option>
+                                <option value="175">Poland</option>
+                                <option value="176">Portugal</option>
+                                <option value="177">Puerto Rico</option>
+                                <option value="178">Qatar</option>
+                                <option value="179">Reunion</option>
+                                <option value="180">Romania</option>
+                                <option value="181">Russia</option>
+                                <option value="182">Rwanda</option>
+                                <option value="183">Saint Helena</option>
+                                <option value="184">Saint Kitts And Nevis</option>
+                                <option value="185">Saint Lucia</option>
+                                <option value="186">Saint Pierre and Miquelon</option>
+                                <option value="187">Saint Vincent And The Grenadines</option>
+                                <option value="188">Samoa</option>
+                                <option value="189">San Marino</option>
+                                <option value="190">Sao Tome and Principe</option>
+                                <option value="191">Saudi Arabia</option>
+                                <option value="192">Senegal</option>
+                                <option value="193">Serbia</option>
+                                <option value="194">Seychelles</option>
+                                <option value="195">Sierra Leone</option>
+                                <option value="196">Singapore</option>
+                                <option value="197">Slovakia</option>
+                                <option value="198">Slovenia</option>
+                                <option value="199">Smaller Territories of the UK</option>
+                                <option value="200">Solomon Islands</option>
+                                <option value="201">Somalia</option>
+                                <option value="202">South Africa</option>
+                                <option value="203">South Georgia</option>
+                                <option value="204">South Sudan</option>
+                                <option value="205">Spain</option>
+                                <option value="206">Sri Lanka</option>
+                                <option value="207">Sudan</option>
+                                <option value="208">Suriname</option>
+                                <option value="209">Svalbard And Jan Mayen Islands</option>
+                                <option value="210">Swaziland</option>
+                                <option value="211">Sweden</option>
+                                <option value="212">Switzerland</option>
+                                <option value="213">Syria</option>
+                                <option value="214">Taiwan</option>
+                                <option value="215">Tajikistan</option>
+                                <option value="216">Tanzania</option>
+                                <option value="217">Thailand</option>
+                                <option value="218">Togo</option>
+                                <option value="219">Tokelau</option>
+                                <option value="220">Tonga</option>
+                                <option value="221">Trinidad And Tobago</option>
+                                <option value="222">Tunisia</option>
+                                <option value="223">Turkey</option>
+                                <option value="224">Turkmenistan</option>
+
+                                <option value="225">Turks And Caicos Islands</option>
+                                <option value="226">Tuvalu</option>
+                                <option value="227">Uganda</option>
+                                <option value="228">Ukraine</option>
+                                <option value="229">United Arab Emirates</option>
+                                <option value="230">United Kingdom</option>
+                                <option value="231">United State</option>
+                                <option value="232">United State Minor Outlying Islands</option>
+                                <option value="233">Uruguay</option>
+                                <option value="234">Uzbekistan</option>
+                                <option value="235">Vanuatu</option>
+                                <option value="236">Vatican City State (Holy See)</option>
+                                <option value="237">Venezuela</option>
+                                <option value="238">Vietnam</option>
+                                <option value="239">Virgin Islands (British)</option>
+                                <option value="240">Virgin Islands (US)</option>
+                                <option value="241">Wallis And Futuna Islands</option>
+                                <option value="242">Western Sahara</option>
+                                <option value="243">Yemen</option>
+                                <option value="244">Yugoslavia</option>
+                                <option value="245">Zambia</option>
+                                <option value="246">Zimbabwe</option>
+                            </select>
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="country"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">State / Province / Region</label>
+                        <div class="input-group">
+                            <select class="form-control" data-val="true" data-val-required="This field is required."
+                                disabled="disabled" id="state" name="state">
+                                <option value="">Please select State Name</option>
+                            </select>
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="state"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">City</label>
+                        <div class="input-group">
+                            <select class="form-control" data-val="true" data-val-required="This field is required."
+                                disabled="disabled" id="city" name="city">
+                                <option value="">Please select City Name</option>
+                            </select>
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="city"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="basic-url">Area</label>
+                        <div class="input-group">
+                            <select class="form-control" data-val="true" data-val-required="This field is required."
+                                id="areas" name="areas">
+                                <option value="">Please select Area Name</option>
+                                <option value="Airport Area">Airport Area</option>
+                                <option value="Aisha Manzil">Aisha Manzil</option>
+                                <option value="Akhtar Colony">Akhtar Colony</option>
+                                <option value="Ancholi">Ancholi</option>
+                                <option value="Awami Colony">Awami Colony</option>
+                                <option value="Azam Basti">Azam Basti</option>
+                                <option value="Bahadurabad">Bahadurabad</option>
+                                <option value="Bhatti Colony">Bhatti Colony</option>
+                                <option value="Bilal Colony">Bilal Colony</option>
+                                <option value="Burmee Colony">Burmee Colony</option>
+                                <option value="Civic Centre">Civic Centre</option>
+                                <option value="Clifton">Clifton</option>
+                                <option value="DHA">DHA</option>
+                                <option value="Dhoraji">Dhoraji</option>
+                                <option value="Essa Nagri">Essa Nagri</option>
+                                <option value="F.B. Area">F.B. Area</option>
+                                <option value="Faisal Cant">Faisal Cant</option>
+                                <option value="Gadap">Gadap</option>
+                                <option value="Garden">Garden</option>
+                                <option value="Gillani Railway Station">Gillani Railway Station</option>
+                                <option value="Gulistan e Johar">Gulistan e Johar</option>
+                                <option value="Gulshan-e-Ghazi">Gulshan-e-Ghazi</option>
+                                <option value="Gulshan-e-Iqbal">Gulshan-e-Iqbal</option>
+                                <option value="Gulshan-e-Jamal">Gulshan-e-Jamal</option>
+                                <option value="Gulshan-e-Maymar">Gulshan-e-Maymar</option>
+                                <option value="Gulzar-e-Hijri">Gulzar-e-Hijri</option>
+                                <option value="Gurumandir">Gurumandir</option>
+                                <option value="Hasrat Mohani Colony">Hasrat Mohani Colony</option>
+                                <option value="Hyderi">Hyderi</option>
+                                <option value="Ibrahim Hyderi">Ibrahim Hyderi</option>
+                                <option value="Jamali Colony">Jamali Colony</option>
+                                <option value="Karsaz">Karsaz</option>
+                                <option value="Kharadar">Kharadar</option>
+                                <option value="Kiamari">Kiamari</option>
+                                <option value="Korangi">Korangi</option>
+                                <option value="Korangi Creek">Korangi Creek</option>
+                                <option value="Landhi Colony">Landhi Colony</option>
+                                <option value="Lyari">Lyari</option>
+                                <option value="M.T. Khan">M.T. Khan</option>
+                                <option value="Malir">Malir</option>
+                                <option value="Malir Cantt.">Malir Cantt.</option>
+                                <option value="Manghopir">Manghopir</option>
+                                <option value="Manzoor Colony">Manzoor Colony</option>
+                                <option value="Mehmoodabad">Mehmoodabad</option>
+                                <option value="Nasir Colonyq">Nasir Colonyq</option>
+                                <option value="Nazimabad">Nazimabad</option>
+                                <option value="New Karachi">New Karachi</option>
+                                <option value="North Karachi">North Karachi</option>
+                                <option value="North Nazimabad">North Nazimabad</option>
+                                <option value="Other">Other</option>
+                                <option value="PAF">PAF</option>
+                                <option value="Pakistan Quarters">Pakistan Quarters</option>
+                                <option value="Paposh Nagar">Paposh Nagar</option>
+                                <option value="PECHS">PECHS</option>
+                                <option value="PIB Colony">PIB Colony</option>
+                                <option value="Quaidabad">Quaidabad</option>
+                                <option value="Regional Office">Regional Office</option>
+                                <option value="Rizvia Society (R.C.H.S.)">Rizvia Society (R.C.H.S.)</option>
+                                <option value="Saddar">Saddar</option>
+                                <option value="Saeedabad">Saeedabad</option>
+                                <option value="Safoora">Safoora</option>
+                                <option value="Safooran Goth">Safooran Goth</option>
+                                <option value="Sakhi Hassan">Sakhi Hassan</option>
+                                <option value="Shadman Town">Shadman Town</option>
+                                <option value="Shafiq Mill Colony">Shafiq Mill Colony</option>
+                                <option value="Shah Faisal">Shah Faisal</option>
+                                <option value="Shaheed-e-Millat">Shaheed-e-Millat</option>
+                                <option value="Shahra-e-Faisal">Shahra-e-Faisal</option>
+                                <option value="Sherabad">Sherabad</option>
+                                <option value="SITE">SITE</option>
+                                <option value="SMCHS">SMCHS</option>
+                                <option value="Soldier Bazar">Soldier Bazar</option>
+                                <option value="Stadium Road">Stadium Road</option>
+                                <option value="Tipu Sultan">Tipu Sultan</option>
+                                <option value="Water Pump">Water Pump</option>
+                                <option value="Yaseenabad">Yaseenabad</option>
+                                <option value="Zaman Town">Zaman Town</option>
+                            </select>
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="areas"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="basic-url">ZIP / Postal Code</label>
+                        <div class="input-group">
+                            <input class="form-control" data-val="true"
+                                data-val-length="This Field cannot be longer than 7 characters." data-val-length-max="7"
+                                data-val-required="This field is required." id="zipcode" name="zipcode" placeholder=""
+                                type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="zipcode"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="col-md-4" style="display:none" id="othr_area">
+                        <label for="basic-url">Other Area</label>
+                        <div class="input-group">
+                            <input class="form-control" data-val="true" data-val-required="This field is required."
+                                id="other_area" name="other_area" placeholder="" type="text" value="">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="other_area"
+                            data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                </p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="text-center"> Choose Program </h5>
+                        <div class="selectprogram" style="text-align:center" border-radius="30px" solid red>
+                            <select name="courses" id="course">
+                                <option value="MS OFFICE">MS OFFICE</option>
+                                <option value="DIGITAL MARKETING">DIGITAL MARKETING</option>
+                                <option value="FREELANCING">FREELANCING</option>
+                                <option value="GRAPHICS DESIGNING"> GRAPHICS DESIGNING</option>
+                                <option value="FULL-STACK-DEVELOPER">FULL-STACK-DEVELOPER</option>
+                                <option value="ETHICKAL HACKER"> ETHICKAL HACKER</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+                <button TYPE="SUBMIT" color="">SUBMIT</button>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </p>
+    <footer>
+        <div class="content">
+
+
+            <div class="left box">
+
+                <div class="topic">Contact us</div>
+                <h6> Mahar's Villa Bhittaiabad Block 9<br> Gulistane-Jauhar karachi<br></h6>
+                <div class="contactdetails" style="color:#fff">
+                    Phone: 03231219136<br>
+                    Email: MIC@gmail.com
+                </div>
+
+
+            </div>
+            <div class="middle box">
+                <div class="topic">Institute</div>
+                <div><a href="index.html">Home</a></div>
+                <div><a href="Aboutus.html">Aboutus</a></div>
+                <div><a href="Courses.html">Courses</a></div>
+                <div><a href="contactus.html">Contactus</a></div>
+                <div><a href="Admission.html">Admission</a></div>
+
+            </div>
+            <div class="right box">
+                <div class="topic">Subscribe us</div>
+                <form action="#">
+                    <input type="text" placeholder="Enter email address">
+                    <input type="submit" name="" value="Subscribe">
+
+                </form>
+            </div>
+        </div>
+        <div class="bottom-details">
+            <div class="bottom_text">
+                <span class="copyright_text">Copyright © 2021 <a href="#">MIC.</a>All rights reserved</span>
+                <span class="policy_terms">
+                    <a href="#">Privacy policy</a>
+                    <a href="#">Terms & condition</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    </div>
+</body>
+
+</html>
